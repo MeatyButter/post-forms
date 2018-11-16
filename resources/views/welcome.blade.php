@@ -79,6 +79,8 @@
                 </div>
             @endif
 
+            <p> database {{{ database_path('database.sqlite') }}}</p>
+
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
