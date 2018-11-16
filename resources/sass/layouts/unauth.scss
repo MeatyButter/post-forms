@@ -1,0 +1,52 @@
+.container-unauth {
+	background: $primary;
+	min-height: 100vh;
+	overflow: auto;
+	position: relative;
+
+	.content {
+		float: left;
+
+		&.left {
+		    position: relative;
+    		width: 600px;
+    		min-height: 100vh;
+
+    		article	{
+	    		header {
+	    			padding-top: 125px;
+
+					.logo {
+						max-width: 300px;
+					}
+	    		}
+
+	    		section {
+	    			padding-bottom: 60px;
+	    		}
+
+	    		footer {
+	    			position: absolute;
+	    			left: 0; right: 0; bottom: 0;
+	    			margin: auto;
+	    		}
+    		}
+    	}
+
+		&.right {
+		    width: calc(100vw - 600px);
+		    height: 100%;
+		    position: absolute;
+		    z-index: 1;
+		    right: 0;
+
+			.content-image {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

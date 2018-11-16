@@ -1,0 +1,17 @@
+h1 { font-size: 36px; font-weight: 800; }
+
+.supporting-text {
+	font-size: 18px;
+	opacity: 0.85;
+	font-weight: bold;
+}
+
+.inverted {
+	h1, h2, h3, h4, h5, h6, p, li, a {
+		color: #fff;
+	}
+}
+
+.small {
+	opacity: 0.85;
+}

@@ -1,100 +1,32 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.unauth')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+    <div class="content left">
+        <article class="table inverted">
+            <header class="table-cell px-5 pb-3 background-inverted">
+                <img class="img-fluid logo mb-5" src="{{ url('images/logo.png') }}">
+                <h1>Build your own posts that only you can see!</h1>
+                <p class="supporting-text">Over 2 people have used this platform to secure their thoughts.</p>
+            </header>
+            <section class="table-cell px-5 pt-3">
+                <p>Our highly secure application allows you to not only make notes but keep them to youself. If you have an idea on the go, this platform probably isn't for you. But it is kind of cool and uses Laravel.</p>
+                <a class="btn btn-primary d-block" href="{{ route('register') }}">Register</a>
+                <a class="btn btn-secondary d-block" href="{{ route('login') }}">Login</a>
+            </section>
+            <footer class="table-cell text-center px-5 bottom">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">Terms of Use</li>
+                    <li class="list-inline-item">Privacy Policy</li>
+                </ul>
+                <p class="small">Copyright &copy; 2018 by Chickerman</p>
+            </footer>
+        </article>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    </div>
 
-            .full-height {
-                height: 100vh;
-            }
+    <div class="content right">
+        <div class="content-image" style="background-image: url({{ url('images/login.jpg') }})"></div>
+    </div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <p> database {{{ database_path('database.sqlite') }}}</p>
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+@endsection
