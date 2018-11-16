@@ -10568,6 +10568,10 @@ h1 {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.navbar-laravel .nav-logo {
+  max-width: 250px;
+}
+
 .color-primary {
   color: #A53200;
 }
