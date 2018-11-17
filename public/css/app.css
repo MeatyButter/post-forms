@@ -10583,6 +10583,14 @@ a {
   max-width: 250px;
 }
 
+.sidebar a {
+  color: #A53200;
+}
+
+.sidebar a.active {
+  font-weight: bold;
+}
+
 .table {
   display: table;
 }

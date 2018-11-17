@@ -1,0 +1,8 @@
+.sidebar {
+  a {
+    color: $primary;
+    &.active {
+      font-weight: bold;
+    }
+  }
+}

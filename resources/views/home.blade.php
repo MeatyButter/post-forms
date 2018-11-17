@@ -3,14 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <aside class="col-md-3">
-            <h1>Dashboard</h1>
-            <ul>
-                <li>Home</li>
-                <li>Create Posts</li>
-                <li>Logout</li>
-            </ul>
-        </aside>
+        @include('partials.sidebar')
         <main class="col-md-9">
             <header>
                 <h1>{{ Auth::user()->name }}</h1>

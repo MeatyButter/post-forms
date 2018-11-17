@@ -31,15 +31,35 @@ class PostController extends Controller
 
     function create()
     {
-
+        // Pass current posts
+        $posts = Post::where('user_id', Auth::user()->id)
+                ->orderBy('created_at', 'DESC')
+                ->get();
+        // return the view while passing the posts array
+        return view('post.create', compact('posts'));
     }
 
-    function store()
+    public function store()
     {
+        // Validate that everything havs been submitted
+        $validator = $this->validate(request(), [
+            'title'  => 'required',
+            'body'  => 'required'
+        ]);
 
+        // If validation passes, create new post and insert into the DB
+        $post = new Post([
+            'user_id'   => Auth::user()->id,
+            'title'      => request('title'),
+            'body'     => request('body')
+        ]);
+
+        $post->save();
+
+        return redirect('/home');
     }
 
-    function delete()
+    protected function delete()
     {
 
     }

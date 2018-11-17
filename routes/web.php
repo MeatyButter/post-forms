@@ -22,6 +22,6 @@ Auth::routes();
 
 Route::get('/home', 'PostController@index')->name('home');
 // Route::get('/posts/{post}', 'PostsController@show');
-Route::get('/post/create', 'PostController@create');
-Route::post('/post/create', 'PostController@store');
+Route::get('/create', 'PostController@create')->name('create');
+Route::post('/create', 'PostController@store');
 Route::delete('/post/{post}/delete', 'PostController@delete');
