@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post as Post;
+use App\Profile as Profile;
 use Auth;
 
 class PostController extends Controller
@@ -25,8 +26,9 @@ class PostController extends Controller
                 ->orderBy('created_at', 'DESC')
                 ->get();
 
+        $profile = Profile::where('user_id', Auth::user()->id)->first();
         // return the view while passing the posts array
-    	return view('home', compact('posts'));
+    	return view('home', compact('posts', 'profile'));
     }
 
     function create()

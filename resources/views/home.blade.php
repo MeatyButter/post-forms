@@ -6,6 +6,7 @@
         @include('partials.sidebar')
         <main class="col-md-9">
             <header>
+                <img class="profile" src="{{ $profile->img }}">
                 <h1>{{ Auth::user()->name }}</h1>
             </header>
             <section class="user-posts mt-5">
