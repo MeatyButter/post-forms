@@ -1,0 +1,20 @@
+@mixin bg_cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@mixin rotate($x, $y) {
+  -webkit-transform: scale($x, $y);
+  -moz-transform: scale($x, $y);
+  -o-transform: scale($x, $y);
+  -ms-transform: scale($x, $y);
+  transform: scale($x, $y);
+}
+
+@mixin transition {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}

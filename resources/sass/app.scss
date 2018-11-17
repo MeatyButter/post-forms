@@ -1,28 +1,22 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800');
 
-// Variables
-@import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-@import 'typography';
+// Preload
+@import 'common/variables';
+@import 'common/logic';
+@import 'common/mixins';
+
+// Common Stylesheets
+@import 'common/global';
+@import 'common/typography';
+
+// Components
+@import 'components/buttons';
+@import 'components/navbar';
 
 // Import Layouts
 @import 'layouts/display';
 @import 'layouts/unauth';
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-
-  .nav-logo {
-  	max-width: 250px;
-  }
-}
-
-.color-primary { color: $primary; }
-
-.background-primary { background: $primary; }
-.background-inverted { background: $black; }

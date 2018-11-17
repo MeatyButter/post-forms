@@ -16,9 +16,9 @@
 	    		header {
 	    			padding-top: 125px;
 
-					.logo {
-						max-width: 300px;
-					}
+						.logo {
+							max-width: 300px;
+						}
 	    		}
 
 	    		section {
@@ -41,9 +41,7 @@
 		    right: 0;
 
 			.content-image {
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: center center;
+				@include bg_cover;
 				height: 100%;
 				width: 100%;
 			}

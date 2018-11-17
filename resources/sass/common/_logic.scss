@@ -1,0 +1,14 @@
+// overflow map
+$overflow: (
+  auto: auto,
+  hidden: hidden,
+  scroll: scroll,
+  visible: visible
+);
+
+// loop over the breakpoints
+@each $key, $value in $overflow {
+  .overflow-#{$key} {
+    overflow: #{$value};
+  }
+}

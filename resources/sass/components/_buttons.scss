@@ -1,0 +1,29 @@
+.btn {
+  &:hover {
+  }
+
+  &.btn-primary {
+    background: $primary;
+    color: $white;
+  }
+
+  &.btn-dark {
+    background: $black;
+    color: $white;
+  }
+
+  &.btn-light {
+    background: $white;
+    color: $black;
+  }
+
+  &.btn-transparent {
+    background: transparent;
+  }
+
+  //Size
+  &.btn-half {
+    width: 50%;
+    float: left;
+  }
+}
