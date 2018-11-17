@@ -15,31 +15,17 @@
             <header>
                 <h1>{{ Auth::user()->name }}</h1>
             </header>
-            <section>
-                <article>
-                    <header>
-                        <h2>This is a title</h2>
-                    </header>
-                    <section>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu nulla justo. Vestibulum ut neque erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac nibh laoreet, accumsan ex non, cursus arcu. Maecenas at dignissim libero. Sed mattis rutrum metus, quis lobortis augue accumsan sit amet. Etiam sit amet efficitur eros, et aliquet felis. Aenean iaculis est ante, in convallis eros commodo non. Donec felis nisl, vulputate vel pharetra eget, semper non risus. Fusce sit amet ultrices elit. Quisque sollicitudin, neque vel lobortis scelerisque, nulla arcu placerat nisl, at mollis nisl nisl eu mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque scelerisque felis quis dolor egestas commodo. Vestibulum ut tellus eget nisi pretium blandit sit amet at velit. Suspendisse potenti.</p>
-                    </section>
-                </article>
-                <article>
-                    <header>
-                        <h2>This is a title</h2>
-                    </header>
-                    <section>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu nulla justo. Vestibulum ut neque erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac nibh laoreet, accumsan ex non, cursus arcu. Maecenas at dignissim libero. Sed mattis rutrum metus, quis lobortis augue accumsan sit amet. Etiam sit amet efficitur eros, et aliquet felis. Aenean iaculis est ante, in convallis eros commodo non. Donec felis nisl, vulputate vel pharetra eget, semper non risus. Fusce sit amet ultrices elit. Quisque sollicitudin, neque vel lobortis scelerisque, nulla arcu placerat nisl, at mollis nisl nisl eu mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque scelerisque felis quis dolor egestas commodo. Vestibulum ut tellus eget nisi pretium blandit sit amet at velit. Suspendisse potenti.</p>
-                    </section>
-                </article>
-                <article>
-                    <header>
-                        <h2>This is a title</h2>
-                    </header>
-                    <section>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu nulla justo. Vestibulum ut neque erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac nibh laoreet, accumsan ex non, cursus arcu. Maecenas at dignissim libero. Sed mattis rutrum metus, quis lobortis augue accumsan sit amet. Etiam sit amet efficitur eros, et aliquet felis. Aenean iaculis est ante, in convallis eros commodo non. Donec felis nisl, vulputate vel pharetra eget, semper non risus. Fusce sit amet ultrices elit. Quisque sollicitudin, neque vel lobortis scelerisque, nulla arcu placerat nisl, at mollis nisl nisl eu mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque scelerisque felis quis dolor egestas commodo. Vestibulum ut tellus eget nisi pretium blandit sit amet at velit. Suspendisse potenti.</p>
-                    </section>
-                </article>
+            <section class="user-posts mt-5">
+                @foreach($posts as $post) {{-- Loop through each post --}}
+                    <article class="card mb-3">
+                        <header class="card-header">
+                            <h3>{{ $post->title }}</h3>
+                        </header>
+                        <section class="card-body">
+                            <p class="card-text">{{ $post->body }}</p>
+                        </section>
+                    </article>
+                @endforeach
             </section>
         </main>
     </div>
