@@ -61,9 +61,16 @@ class PostController extends Controller
         return redirect('/home');
     }
 
-    protected function delete()
+    protected function delete(Post $post)
     {
+        // validate that the user is correct
+        if( auth()->user()->id != $post->user_id ):
+            return back();
+        endif;
 
+        // delete the post
+        $post->delete();
+        return back();
     }
 
 }

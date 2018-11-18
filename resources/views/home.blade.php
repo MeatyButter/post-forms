@@ -19,7 +19,14 @@
                     @foreach($posts as $post) {{-- Loop through each post --}}
                         <article class="card mb-3">
                             <header class="card-header">
-                                <h3>{{ $post->title }}</h3>
+                                <h3 class="float-left">{{ $post->title }}</h3>
+
+                                <form method="POST" action="{{ URL::to('/post/' . $post->id . '/delete') }}"  class="float-right">
+                                    @csrf
+                                    {{method_field('DELETE')}}
+                                    @include ('partials.errors')
+                                    <input type="submit" name="delete" type="button" value="delete" class="btn btn-secondary">
+                                </form>
                             </header>
                             <section class="card-body">
                                 <p class="card-text">{{ $post->body }}</p>
