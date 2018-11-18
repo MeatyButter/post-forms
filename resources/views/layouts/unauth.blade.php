@@ -16,8 +16,10 @@
     <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <main class="container-unauth">
-        @yield('content')
-    </main>
+    <div id="app">
+        <main class="container-unauth">
+            @yield('content')
+        </main>
+    </div>
 
 </body>
