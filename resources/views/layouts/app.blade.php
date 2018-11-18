@@ -12,6 +12,30 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function readURL(input) {
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              $('#imgPlaceholder').attr('style', 'background-image: url("' +e.target.result + '")' );
+            }
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+    </script>
+
+    @if (count($errors))
+      <script type="text/javascript">
+        jQuery(document).ready(function(){
+          jQuery('#profileModal').modal('show');
+        });
+      </script>
+    @endif
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">

@@ -25,3 +25,5 @@ Route::get('/home', 'PostController@index')->name('home');
 Route::get('/create', 'PostController@create')->name('create');
 Route::post('/create', 'PostController@store');
 Route::delete('/post/{post}/delete', 'PostController@delete');
+
+Route::post('/profile', 'ProfileController@update');

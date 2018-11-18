@@ -10583,6 +10583,28 @@ a {
   max-width: 250px;
 }
 
+.profile-card .profile-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#profileModal .profile-upload {
+  width: 50%;
+}
+
+#profileModal .profile-upload .profile-placeholder {
+  height: 249px;
+  width: 249px;
+  background-image: url("/images/profile-placeholder.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .sidebar a {
   color: #A53200;
 }
@@ -10599,11 +10621,11 @@ a {
   display: table-row;
 }
 
-.table .table-row .table-cell {
+.table .table-cell {
   display: table-cell;
 }
 
-.table .table-row .table-cell.bottom {
+.table .table-cell.bottom {
   vertical-align: bottom;
 }
 

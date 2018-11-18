@@ -3,13 +3,13 @@
 	
 	.table-row {
     	display: table-row;
-
-    	.table-cell {
-    		display: table-cell;
-
-    		&.bottom {
-    			vertical-align: bottom;
-    		}
-    	}
 	}
+
+    .table-cell {
+        display: table-cell;
+
+        &.bottom {
+            vertical-align: bottom;
+        }
+    }
 }

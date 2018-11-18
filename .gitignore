@@ -7,6 +7,7 @@
 /.vscode
 /nbproject
 /.vagrant
+/public/images/user
 *.DS_STORE
 Homestead.json
 Homestead.yaml

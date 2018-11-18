@@ -13,10 +13,11 @@
 @import 'common/global';
 @import 'common/typography';
 
-// Components
-@import 'components/buttons';
-@import 'components/navbar';
-@import 'components/sidebar';
+// Partials
+@import 'partials/buttons';
+@import 'partials/navbar';
+@import 'partials/profile';
+@import 'partials/sidebar';
 
 // Import Layouts
 @import 'layouts/display';

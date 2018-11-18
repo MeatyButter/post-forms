@@ -1,0 +1,25 @@
+.profile-card {
+  .profile-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    @include bg_cover;
+  }
+
+  .profile-name {
+
+  }
+}
+
+#profileModal {
+  .profile-upload {
+    width: 50%;
+
+    .profile-placeholder {
+      height: 249px;
+      width: 249px;
+      background-image: url('/images/profile-placeholder.jpg');
+      @include bg_cover;
+    }
+  }
+}
