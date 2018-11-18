@@ -4,32 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "06d2f29c8579e63067b86d44fc9597ea",
+    "content-hash": "fa7b9d605a803980839566d7f7ddfc35",
     "packages": [
         {
             "name": "browner12/helpers",
-            "version": "v1.1.1",
+            "version": "v2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/browner12/helpers.git",
-                "reference": "08c964a1825bbba420dcfc886193cd65573c3d2a"
+                "reference": "ad1faab0721688e926857ec0711378c086d645c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/browner12/helpers/zipball/08c964a1825bbba420dcfc886193cd65573c3d2a",
-                "reference": "08c964a1825bbba420dcfc886193cd65573c3d2a",
+                "url": "https://api.github.com/repos/browner12/helpers/zipball/ad1faab0721688e926857ec0711378c086d645c4",
+                "reference": "ad1faab0721688e926857ec0711378c086d645c4",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "~5.2",
-                "illuminate/contracts": "~5.2",
-                "illuminate/support": "~5.2",
-                "php": ">=5.5.9"
+                "illuminate/console": "5.5.*|5.6.*|5.7.*",
+                "illuminate/contracts": "5.5.*|5.6.*|5.7.*",
+                "illuminate/support": "5.5.*|5.6.*|5.7.*",
+                "php": ">=7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*",
+                "phpunit/phpunit": "~6.0|~7.0",
                 "scrutinizer/ocular": "~1.1",
                 "squizlabs/php_codesniffer": "~2.3"
+            },
+            "suggest": {
+                "moneyphp/money": "Money value object."
             },
             "type": "library",
             "extra": {
@@ -64,7 +67,7 @@
                 "browner12",
                 "helpers"
             ],
-            "time": "2017-07-17T03:46:27+00:00"
+            "time": "2018-09-11T15:55:15+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
