@@ -6,7 +6,7 @@ $overflow: (
   visible: visible
 );
 
-// loop over the breakpoints
+// loop over the overflow map
 @each $key, $value in $overflow {
   .overflow-#{$key} {
     overflow: #{$value};

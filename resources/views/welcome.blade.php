@@ -5,7 +5,7 @@
     <div class="content left">
         <article class="table inverted">
             <header class="px-5 pb-3 background-inverted">
-                <img class="img-fluid logo mb-5" src="{{ asset('images/logo.png') }}">
+                <img class="img-fluid logo mb-5" src="{{ secure_asset('images/logo.png') }}">
                 <h1>Build your own posts that only you can see!</h1>
                 <p class="supporting-text">Over 2 people have used this platform to secure their thoughts.</p>
             </header>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="content right">
-        <div class="content-image" style="background-image: url({{ asset('images/login.jpg') }})"></div>
+        <div class="content-image" style="background-image: url({{ secure_asset('images/login.jpg') }})"></div>
     </div>
 
 @endsection
