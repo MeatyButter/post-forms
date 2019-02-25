@@ -6,29 +6,33 @@
         @include('partials.sidebar')
         <main class="col-md-6">
             <header>
-                <h1>Create a Post</h1>
+                <h1>Update your Post</h1>
             </header>
             <section class="user-posts mt-5">
                 @include ('partials.errors')
-                <form method="POST" action="{{ URL::to('/create') }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ URL::to('/post/' . $post->id . '/update') }}" enctype="multipart/form-data">
                     @csrf
-
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input class="form-control" type="text" name="title" value="{{ old('title') }}">
+                        <input class="form-control" type="text" name="title" value="{{ $post->title }}">
                     </div>
                     <div class="form-group">
                         <label for="body">Body (Max characters 500)</label>
-                        <textarea class="form-control" name="body" maxlength="500">{{ old('body') }}</textarea>
+                        <textarea class="form-control" name="body" maxlength="500">{{ $post->body }}</textarea>
                     </div>
                     <hr>
                     <div class="form-group">
                         <!-- Rounded switch -->
                         <p>Make Public</p>
                         <label class="switch">
-                          <input type="checkbox" name="public">
+                          <input id="publicCheckbox" type="checkbox" name="public">
                           <span class="slider round"></span>
                         </label>
+                          @if($post->is_public == 1)
+                            <script type="text/javascript">
+                                document.getElementById('publicCheckbox').checked = true;
+                            </script>
+                          @endif
                     </div>
                     <div class="form-group">
                         <input class="form-control btn btn-primary d-block" type="submit" >

@@ -41,6 +41,35 @@ class PostController extends Controller
         return view('post.create', compact('posts'));
     }
 
+    function edit(Post $post){
+        // Pass current posts
+        $posts = Post::where('user_id', Auth::user()->id)
+                ->orderBy('created_at', 'DESC')
+                ->get();
+        // return the view while passing the posts array
+        return view('post.update', compact('post','posts'));
+    }
+
+
+    function update(Post $post){
+        if(Auth::user()->id != $post->user_id)
+          exit('Sneaky Batchi');
+
+        // Validate that everything havs been submitted
+        $validator = $this->validate(request(), [
+            'title'     => 'required',
+            'body'      => 'required'
+        ]);
+
+        $post->title = request('title');
+        $post->body = request('body');
+        $post->is_public = request()->has('public');
+
+        $post->save();
+
+        return redirect('/home');
+    }
+
     public function store()
     {
         // Validate that everything havs been submitted
