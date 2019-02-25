@@ -45,15 +45,16 @@ class PostController extends Controller
     {
         // Validate that everything havs been submitted
         $validator = $this->validate(request(), [
-            'title'  => 'required',
-            'body'  => 'required'
+            'title'     => 'required',
+            'body'      => 'required'
         ]);
 
         // If validation passes, create new post and insert into the DB
         $post = new Post([
-            'user_id'   => Auth::user()->id,
-            'title'      => request('title'),
-            'body'     => request('body')
+            'user_id'       => Auth::user()->id,
+            'title'         => request('title'),
+            'body'          => request('body'),
+            'is_public'     => request()->has('public')
         ]);
 
         $post->save();

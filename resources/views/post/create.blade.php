@@ -23,6 +23,14 @@
                     </div>
                     <hr>
                     <div class="form-group">
+                        <!-- Rounded switch -->
+                        <p>Make Public</p>
+                        <label class="switch">
+                          <input type="checkbox" name="public">
+                          <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
                         <input class="form-control btn btn-primary d-block" type="submit" >
                     </div>
                 </form>
