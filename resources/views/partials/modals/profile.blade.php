@@ -19,7 +19,7 @@
                 @include ('partials.errors')
                 <div class="form-group mb-0">
                   <label for=image>Select image to upload:</label>
-                  <input type="file" name="img" id="imgUpload" class="form-control-file" onchange="readURL(this);" accept=".jpg, .jpeg, .png, .gif" >
+                  <input type="file" name="img" id="imgUpload" class="form-control-file" onchange="custom.readURL(this);" accept=".jpg, .jpeg, .png, .gif" >
                 </div>
               </div>
               <div class="modal-footer">
