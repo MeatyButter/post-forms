@@ -24,7 +24,7 @@
                                     @csrf
                                     {{method_field('DELETE')}}
                                     @include ('partials.errors')
-                                    <input type="submit" name="delete" type="button" value="delete" class="btn btn-danger">
+                                    <input type="submit" name="delete" type="button" value="Delete" class="btn btn-danger">
                                 </form>
                                 <a class="float-right btn btn-secondary mr-1" href="{{ URL::to('/post/' . $post->id . '/update') }}">Update</a>
                             </header>
